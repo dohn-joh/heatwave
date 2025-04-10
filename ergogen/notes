@@ -1,0 +1,25 @@
+freerouting
+
+use standalone application https://github.com/freerouting/freerouting/releases/
+don't use the kicad plugin.
+this will enable use or .rules files and cli arguments. to my understanding, you can't do this with the plugin.
+    use the standalone program:
+        ex: freerouting -de board.dsn -do test.ses -mp 15 -dr freerouting.rules
+    to use the jar:
+        ex: java.exe -jar freerouting-1.9.0.jar -de MyBoard.dsn -do MyBoard.ses -mp 100 -dr MyBoard.rules
+
+Freerouting settings
+    PowerGround trace width (RAW, GND, VCC, BAT_P): 0.25mm
+    all other trace width: 0.15mm
+    padstacks: 600um 
+    annular width:300um hole
+
+!!!NOTE!!! only need to do step 1. can reuse freerouting.rules, which i made previously. then run the appropriate command, freerouting -de YOUR_DSN_FILE.dsn -do test.ses -mp 15 -dr freerouting.rules
+    1 kicad: open pcb file. File > Export > Specctra DSN
+    2 freerouting: select/open .dsn
+        - File > Export Specctra session file
+        - accept the prompt to save the rules file
+    3 open the .rules file and edit it. reference test.rules as an example and replace the relevant values (800 to 600, 400 to 300, etc)
+    4 run the desired freerouting command in terminal (see example above)
+    5 freerouting: after freerouting is complete, File > Export Specctra session file
+    6 kicad: File > Import > Specctra session

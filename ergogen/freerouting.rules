@@ -1,0 +1,99 @@
+
+(rules PCB nib
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 150.0)
+    (clearance 200.2)
+    (clearance 75.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 200.2 (type "kicad_default"))
+    (clearance 200.2 (type PowerGround))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 150.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    RST DATA CLK TPR R0 R1 R2 R3
+    R4 SP D1 C0 C1 C2 C3 C4
+    C5 C6 C7 "MCU1_24" "MCU1_1" "MCU1_23" "MCU1_2" "MCU1_22"
+    "MCU1_3" "MCU1_21" "MCU1_4" "MCU1_20" "MCU1_5" "MCU1_19" "MCU1_6" "MCU1_18"
+    "MCU1_7" "MCU1_17" "MCU1_8" "MCU1_16" "MCU1_9" "MCU1_15" "MCU1_10" "MCU1_14"
+    "MCU1_11" "MCU1_13" "MCU1_12" "pinky2_bottom" "pinky2_home" "pinky2_top" "pinky2_num" "pinky_bottom"
+    "pinky_home" "pinky_top" "pinky_num" "ring_bottom" "ring_home" "ring_top" "ring_num" "middle_bottom"
+    "middle_home" "middle_top" "middle_num" "index_bottom" "index_home" "index_top" "index_num" "inner_bottom"
+    "inner_home" "inner_top" "inner_num" "inner2_bottom" "home_bottom" "outer_bottom" "outer_top" "outer2_bottom"
+    "outer2_top" RESETC
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 150.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class PowerGround
+    RAW GND VCC "BAT_P"
+    (clearance_class "kicad_default")
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
+

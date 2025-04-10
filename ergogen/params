@@ -1,0 +1,29 @@
+Name	Variable type	Value	Description
+offset_pcb	Length	0.5	
+thickness_case	Length	2.75	
+thickness_plate	Length	1.45	
+gap_plate_pcb	Length	2.2mm - #thickness_plate	
+height_key_walls	Length	6.0	
+thickness_pcb	Length	1.2	
+thickness_bottom	Length	3.3mm - #thickness_pcb + 0.2mm	
+chamfer_case	Length	0.7	
+fillet_large	Length	5.0	
+fillet_small	Length	1.5	
+thickness_mcu	Length	3.3	
+cutout_depth	Length	#thickness_mcu + 1.2mm	
+thickness_wall	Length	#gap_plate_pcb + #thickness_pcb + #thickness_bottom	
+cutout_reset	Length	5	
+chamfer_angle_cutout	Angle	15	
+height_mcu_usb	Length	3.2	
+width_netdot	Length	10.8	
+height_netdot	Length	5.9	
+width_netdot_flat	Length	6.2	
+protrude_netdot	Length	5.5	
+diameter_screw_head	Length	4.5	
+thickness_screw_head	Length	0.75	
+height_heatset	Length	3	
+depth_heatset_hole	Length	1.65 * #height_heatset	
+chamfer_heatset	Length	0.6	
+diameter_heatset_hole	Length	3	
+thickness_battery	Length	3 + 0.5	
+thickness_choc_plate	Length	1.2	

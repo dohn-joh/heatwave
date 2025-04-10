@@ -1,0 +1,18 @@
+___RUN IN ORDER___
+remove uuid
+%s/(uuid.*")//g
+
+add rotations to lines that already have rotations
+%s/(\(at -\?[0-9.]* -\?[0-9.]*\) \(-\?[0-9.]*\))/(\1 ${\2 + p.rot})/g
+
+add rotations to lines that don't have rotations yet
+%s/(\(at -\?[0-9.]* -\?[0-9.]*\))/(\1 ${p.rot})/g
+
+### kicad5 and earlier ###
+remove inline tstamp
+%s/ (tstamp .*))/)/g
+
+remove isolate tstamp lines
+%s/ (tstamp .*)\n//g
+
+

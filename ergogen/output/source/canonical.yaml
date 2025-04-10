@@ -1,0 +1,240 @@
+units:
+    $default_width: u
+    $default_height: u
+    angle: 0
+    split: u+30
+    capxy: 18.4
+    gap: 0.6
+    thumb_offset: 2u
+    switch_xy_mx: 14
+    switch_xy_choc: 13.75
+    lxy: 19.5
+    sf: 19.151
+    mcuy: 17.78
+    mcux: 33.08
+    wallxy: 1
+    min_wall_thickness: 0.7
+    bcx: 31.5+0.8
+    bcy: 12.5+0.8
+    rsx: 4.7
+    rsy: 3.5
+    rsh: 0.75
+    rsd: 2.75
+    rcx: rsx+3.3
+    rcy: rsy+1
+    scd: 2.2
+    tid: 3
+    scb: 2.45
+    sch: 4.5
+    case_offset: 0.5
+    case_thickness: 5
+    top_offset: 6.5
+    bottom_offset: 1
+    side_offset: 3.5
+points:
+    zones:
+        r1:
+            anchor:
+                rotate: '-angle/2'
+            mirror:
+                ref: r1_t_top
+                shift:
+                    - 0.5u
+                    - 0.5u
+                distance: 0
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                e:
+                    key:
+                        column_net: C3
+                r:
+                    key:
+                        column_net: C4
+                t:
+                    key:
+                        column_net: C5
+        r2:
+            anchor:
+                ref: r1_q_top
+                shift:
+                    - 0
+                    - '-u'
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                d:
+                    key:
+                        column_net: C3
+                f:
+                    key:
+                        column_net: C4
+                g:
+                    key:
+                        column_net: C5
+                h:
+                    key:
+                        column_net: C6
+                j:
+                    key:
+                        column_net: C7
+                k:
+                    key:
+                        column_net: C8
+                l:
+                    key:
+                        column_net: C9
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+        r3:
+            anchor:
+                ref: r1_q_top
+                shift:
+                    - '-0.25u'
+                    - '-2u'
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                z:
+                    key:
+                        column_net: C1
+                x:
+                    key:
+                        column_net: C2
+                c:
+                    key:
+                        column_net: C3
+                v:
+                    key:
+                        column_net: C4
+                b:
+                    key:
+                        column_net: C5
+                'n':
+                    key:
+                        column_net: C6
+                m:
+                    key:
+                        column_net: C7
+                comma:
+                    key:
+                        column_net: C8
+                dot:
+                    key:
+                        column_net: C9
+                slash:
+                    key:
+                        column_net: C10
+        r4:
+            anchor:
+                ref: r2_d_home
+                shift:
+                    - 0
+                    - '-2u'
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                base2:
+                    key:
+                        column_net: C7
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex

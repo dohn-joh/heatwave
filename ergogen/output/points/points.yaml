@@ -1,0 +1,3650 @@
+r1_q_top:
+    x: 0
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 23.75
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: q_top
+        name: r1_q_top
+        tags:
+            - alphas
+            - twofive
+        bind:
+            - 0
+            - 4u
+            - 2u
+            - 0
+        column_net: C1
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                bind:
+                    - 0
+                    - 4u
+                    - 2u
+                    - 0
+                width: 1.25u
+                column_net: C1
+                tags:
+                    - alphas
+                    - twofive
+            rows: {}
+            name: q
+        row: top
+        mirrored: false
+r1_w_top:
+    x: 21.375
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 21.375
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: w_top
+        name: r1_w_top
+        tags: alphas
+        column_net: C2
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                spread: 1.25u/2+u/2
+                column_net: C2
+            rows: {}
+            name: w
+        row: top
+        mirrored: false
+r1_e_top:
+    x: 40.375
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: e_top
+        name: r1_e_top
+        tags: alphas
+        column_net: C3
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C3
+            rows: {}
+            name: e
+        row: top
+        mirrored: false
+r1_r_top:
+    x: 59.375
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: r_top
+        name: r1_r_top
+        tags: alphas
+        column_net: C4
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C4
+            rows: {}
+            name: r
+        row: top
+        mirrored: false
+r1_t_top:
+    x: 78.375
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: t_top
+        name: r1_t_top
+        tags: alphas
+        column_net: C5
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C5
+            rows: {}
+            name: t
+        row: top
+        mirrored: false
+mirror_r1_q_top:
+    x: 175.75
+    'y': 0
+    r: -0.0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 23.75
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: mirror_q_top
+        name: mirror_r1_q_top
+        tags:
+            - alphas
+            - twofive
+        bind:
+            - 0
+            - 4u
+            - 2u
+            - 0
+        column_net: C1
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                bind:
+                    - 0
+                    - 4u
+                    - 2u
+                    - 0
+                width: 1.25u
+                column_net: C1
+                tags:
+                    - alphas
+                    - twofive
+            rows: {}
+            name: q
+        row: top
+        mirrored: true
+mirror_r1_w_top:
+    x: 154.375
+    'y': 0
+    r: -0.0
+    meta:
+        stagger: 0
+        spread: 21.375
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: mirror_w_top
+        name: mirror_r1_w_top
+        tags: alphas
+        column_net: C2
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                spread: 1.25u/2+u/2
+                column_net: C2
+            rows: {}
+            name: w
+        row: top
+        mirrored: true
+mirror_r1_e_top:
+    x: 135.375
+    'y': 0
+    r: -0.0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: mirror_e_top
+        name: mirror_r1_e_top
+        tags: alphas
+        column_net: C3
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C3
+            rows: {}
+            name: e
+        row: top
+        mirrored: true
+mirror_r1_r_top:
+    x: 116.375
+    'y': 0
+    r: -0.0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: mirror_r_top
+        name: mirror_r1_r_top
+        tags: alphas
+        column_net: C4
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C4
+            rows: {}
+            name: r
+        row: top
+        mirrored: true
+mirror_r1_t_top:
+    x: 97.375
+    'y': 0
+    r: -0.0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: mirror_t_top
+        name: mirror_r1_t_top
+        tags: alphas
+        column_net: C5
+        row_net: R1
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                top:
+                    row_net: R1
+            columns:
+                q:
+                    key:
+                        bind:
+                            - 0
+                            - 4u
+                            - 2u
+                            - 0
+                        width: 1.25u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - twofive
+                    rows: {}
+                    name: q
+                w:
+                    key:
+                        spread: 1.25u/2+u/2
+                        column_net: C2
+                    rows: {}
+                    name: w
+                e:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: e
+                r:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: r
+                t:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: t
+            name: r1
+        col:
+            key:
+                column_net: C5
+            rows: {}
+            name: t
+        row: top
+        mirrored: true
+r2_a_home:
+    x: 0
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 28.5
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: a_home
+        name: r2_a_home
+        tags:
+            - alphas
+            - five
+        column_net: C1
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                width: 1.5u
+                column_net: C1
+                tags:
+                    - alphas
+                    - five
+            rows: {}
+            name: a
+        row: home
+r2_s_home:
+    x: 23.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 23.75
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: s_home
+        name: r2_s_home
+        tags: alphas
+        column_net: C2
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                spread: 1.5u/2 + u/2
+                column_net: C2
+            rows: {}
+            name: s
+        row: home
+r2_d_home:
+    x: 42.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: d_home
+        name: r2_d_home
+        tags: alphas
+        column_net: C3
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C3
+            rows: {}
+            name: d
+        row: home
+r2_f_home:
+    x: 61.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: f_home
+        name: r2_f_home
+        tags: alphas
+        column_net: C4
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C4
+            rows: {}
+            name: f
+        row: home
+r2_g_home:
+    x: 80.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: g_home
+        name: r2_g_home
+        tags: alphas
+        column_net: C5
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C5
+            rows: {}
+            name: g
+        row: home
+r2_h_home:
+    x: 99.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: h_home
+        name: r2_h_home
+        tags: alphas
+        column_net: C6
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C6
+            rows: {}
+            name: h
+        row: home
+r2_j_home:
+    x: 118.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: j_home
+        name: r2_j_home
+        tags: alphas
+        column_net: C7
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C7
+            rows: {}
+            name: j
+        row: home
+r2_k_home:
+    x: 137.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: k_home
+        name: r2_k_home
+        tags: alphas
+        column_net: C8
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C8
+            rows: {}
+            name: k
+        row: home
+r2_l_home:
+    x: 156.75
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: l_home
+        name: r2_l_home
+        tags: alphas
+        column_net: C9
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                column_net: C9
+            rows: {}
+            name: l
+        row: home
+r2_semi_home:
+    x: 180.5
+    'y': -19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 23.75
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 28.5
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: semi_home
+        name: r2_semi_home
+        tags:
+            - alphas
+            - five
+        column_net: C10
+        row_net: R2
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                home:
+                    row_net: R2
+            columns:
+                a:
+                    key:
+                        width: 1.5u
+                        column_net: C1
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: a
+                s:
+                    key:
+                        spread: 1.5u/2 + u/2
+                        column_net: C2
+                    rows: {}
+                    name: s
+                d:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: d
+                f:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: f
+                g:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: g
+                h:
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: h
+                j:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: j
+                k:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: k
+                l:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: l
+                semi:
+                    key:
+                        width: 1.5u
+                        spread: u/2+1.5u/2
+                        column_net: C10
+                        tags:
+                            - alphas
+                            - five
+                    rows: {}
+                    name: semi
+            name: r2
+        col:
+            key:
+                width: 1.5u
+                spread: u/2+1.5u/2
+                column_net: C10
+                tags:
+                    - alphas
+                    - five
+            rows: {}
+            name: semi
+        row: home
+r3_extra_bottom:
+    x: -4.75
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: extra_bottom
+        name: r3_extra_bottom
+        tags: alphas
+        column_net: C0
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C0
+            rows: {}
+            name: extra
+        row: bottom
+r3_z_bottom:
+    x: 14.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: z_bottom
+        name: r3_z_bottom
+        tags: alphas
+        column_net: C1
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C1
+            rows: {}
+            name: z
+        row: bottom
+r3_x_bottom:
+    x: 33.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: x_bottom
+        name: r3_x_bottom
+        tags: alphas
+        column_net: C2
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C2
+            rows: {}
+            name: x
+        row: bottom
+r3_c_bottom:
+    x: 52.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: c_bottom
+        name: r3_c_bottom
+        tags: alphas
+        column_net: C3
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C3
+            rows: {}
+            name: c
+        row: bottom
+r3_v_bottom:
+    x: 71.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: v_bottom
+        name: r3_v_bottom
+        tags: alphas
+        column_net: C4
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C4
+            rows: {}
+            name: v
+        row: bottom
+r3_b_bottom:
+    x: 90.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: b_bottom
+        name: r3_b_bottom
+        tags: alphas
+        column_net: C5
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C5
+            rows: {}
+            name: b
+        row: bottom
+r3_n_bottom:
+    x: 109.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: n_bottom
+        name: r3_n_bottom
+        tags: alphas
+        column_net: C6
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C6
+            rows: {}
+            name: 'n'
+        row: bottom
+r3_m_bottom:
+    x: 128.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: m_bottom
+        name: r3_m_bottom
+        tags: alphas
+        column_net: C7
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C7
+            rows: {}
+            name: m
+        row: bottom
+r3_comma_bottom:
+    x: 147.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: comma_bottom
+        name: r3_comma_bottom
+        tags: alphas
+        column_net: C8
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C8
+            rows: {}
+            name: comma
+        row: bottom
+r3_dot_bottom:
+    x: 166.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: dot_bottom
+        name: r3_dot_bottom
+        tags: alphas
+        column_net: C9
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C9
+            rows: {}
+            name: dot
+        row: bottom
+r3_slash_bottom:
+    x: 185.25
+    'y': -38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: slash_bottom
+        name: r3_slash_bottom
+        tags: alphas
+        column_net: C10
+        row_net: R3
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: alphas
+            rows:
+                bottom:
+                    row_net: R3
+            columns:
+                extra:
+                    key:
+                        column_net: C0
+                    rows: {}
+                    name: extra
+                z:
+                    key:
+                        column_net: C1
+                    rows: {}
+                    name: z
+                x:
+                    key:
+                        column_net: C2
+                    rows: {}
+                    name: x
+                c:
+                    key:
+                        column_net: C3
+                    rows: {}
+                    name: c
+                v:
+                    key:
+                        column_net: C4
+                    rows: {}
+                    name: v
+                b:
+                    key:
+                        column_net: C5
+                    rows: {}
+                    name: b
+                'n':
+                    key:
+                        column_net: C6
+                    rows: {}
+                    name: 'n'
+                m:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: m
+                comma:
+                    key:
+                        column_net: C8
+                    rows: {}
+                    name: comma
+                dot:
+                    key:
+                        column_net: C9
+                    rows: {}
+                    name: dot
+                slash:
+                    key:
+                        column_net: C10
+                    rows: {}
+                    name: slash
+            name: r3
+        col:
+            key:
+                column_net: C10
+            rows: {}
+            name: slash
+        row: bottom
+r4_flex_thumb:
+    x: 37.5
+    'y': -57.95
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - -5.25
+            - -0.9500000000000001
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: flex_thumb
+        name: r4_flex_thumb
+        tags: flex
+        column_net: C3
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                shift:
+                    - '-0.25u-0.5'
+                    - '-0.55-0.4'
+                column_net: C3
+                tags: flex
+            rows: {}
+            name: flex
+        row: thumb
+r4_base_thumb:
+    x: 61.75
+    'y': -57
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: base_thumb
+        name: r4_base_thumb
+        tags: thumbs
+        bind:
+            - 0.5u
+            - 124.3255
+            - 0
+            - 67.3255
+        column_net: C4
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                bind:
+                    - 0.5u
+                    - 124.3255
+                    - 0
+                    - 67.3255
+                column_net: C4
+            rows: {}
+            name: base
+        row: thumb
+r4_ext_thumb:
+    x: 80.75
+    'y': -61.75
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - -4.75
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: ext_thumb
+        name: r4_ext_thumb
+        tags: ext
+        column_net: C5
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                shift:
+                    - 0
+                    - '-0.25u'
+                column_net: C5
+                tags: ext
+            rows: {}
+            name: ext
+        row: thumb
+r4_ext2_thumb:
+    x: 99.75
+    'y': -61.75
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - -4.75
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: ext2_thumb
+        name: r4_ext2_thumb
+        tags: ext
+        column_net: C6
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                shift:
+                    - 0
+                    - '-0.25u'
+                tags: ext
+                column_net: C6
+            rows: {}
+            name: ext2
+        row: thumb
+r4_base2_thumb:
+    x: 118.75
+    'y': -57
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: base2_thumb
+        name: r4_base2_thumb
+        tags: thumbs
+        column_net: C7
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                column_net: C7
+            rows: {}
+            name: base2
+        row: thumb
+r4_flex2_thumb:
+    x: 143
+    'y': -57.95
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 5.25
+            - -0.9500000000000001
+        rotate: 0
+        adjust: {}
+        width: 19
+        height: 19
+        padding: 19
+        autobind: 0
+        skip: false
+        asym: both
+        colrow: flex2_thumb
+        name: r4_flex2_thumb
+        tags: flex
+        bind:
+            - 0.5u
+            - 0
+            - 0
+            - 0
+        column_net: C8
+        row_net: R4
+        zone:
+            key:
+                width: u
+                height: u
+                autobind: 0
+                tags: thumbs
+            rows:
+                thumb:
+                    row_net: R4
+            columns:
+                flex:
+                    key:
+                        shift:
+                            - '-0.25u-0.5'
+                            - '-0.55-0.4'
+                        column_net: C3
+                        tags: flex
+                    rows: {}
+                    name: flex
+                base:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 124.3255
+                            - 0
+                            - 67.3255
+                        column_net: C4
+                    rows: {}
+                    name: base
+                ext:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        column_net: C5
+                        tags: ext
+                    rows: {}
+                    name: ext
+                ext2:
+                    key:
+                        shift:
+                            - 0
+                            - '-0.25u'
+                        tags: ext
+                        column_net: C6
+                    rows: {}
+                    name: ext2
+                base2:
+                    key:
+                        column_net: C7
+                    rows: {}
+                    name: base2
+                flex2:
+                    key:
+                        bind:
+                            - 0.5u
+                            - 0
+                            - 0
+                            - 0
+                        shift:
+                            - 0.25u+0.5
+                            - '-0.55-0.4'
+                        column_net: C8
+                        tags: flex
+                    rows: {}
+                    name: flex2
+            name: r4
+        col:
+            key:
+                bind:
+                    - 0.5u
+                    - 0
+                    - 0
+                    - 0
+                shift:
+                    - 0.25u+0.5
+                    - '-0.55-0.4'
+                column_net: C8
+                tags: flex
+            rows: {}
+            name: flex2
+        row: thumb
