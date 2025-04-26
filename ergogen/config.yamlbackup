@@ -69,8 +69,6 @@ points:
         height: u
         autobind: 0
         tags: alphas
-        column_next: "this is a bug!"
-        column_prev: "this is a bug!"
       rows.top:
         row_net: R1
       columns:
@@ -78,35 +76,26 @@ points:
           key:
             width: 1.25u
             column_net: C1
-            column_next: w
-            tags: [alphas, twofive, odd]
+            tags: [alphas, twofive]
         w:
           key:
             spread: 1.25u/2+u/2
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C2
-            column_prev: mirror_q
-            tags: [alphas, even]
         e:
           key:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C3
-            column_next: r
-            tags: [alphas, odd]
         r:
           key:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C4
-            column_prev: mirror_e
-            tags: [alphas, even]
         t:
           key:
             column_net: C5
-            column_next: mirror_t
-            tags: [alphas, odd]
     r2:
       anchor:
         ref: r1_q_top
@@ -125,35 +114,26 @@ points:
           key:
             width: 1.25u
             column_net: C1
-            column_next: s
-            tags: [alphas, twofive, odd]
+            tags: [alphas, twofive]
         s:
           key:
             spread: 1.25u/2 + u/2
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C2
-            column_prev: mirror_a
-            tags: [alphas, even]
         d:
           key:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C3
-            column_next: f
-            tags: [alphas, odd]
         f:
           key:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C4
-            column_prev: mirror_d
-            tags: [alphas, even]
         g:
           key:
             column_net: C5
-            column_next: mirror_g
-            tags: [alphas, odd]
     r3:
       anchor:
         ref: r1_q_top
@@ -176,34 +156,24 @@ points:
             width: u
             # tags: [alphas, twofive]
             column_net: C1
-            column_next: x
-            tags: [alphas, odd]
         x:
           key:
             origin: [-0.5u, -0.5u]
             splay: -0.5angle_key
             column_net: C2
-            column_prev: mirror_z
-            tags: [alphas, even]
         c:
           key:
             origin: [-0.5u, -0.5u]
             splay: -1.25angle_key
             column_net: C3
-            column_next: v
-            tags: [alphas, odd]
         v:
           key:
             origin: [-0.5u, -0.5u]
             splay: -1.25angle_key
             column_net: C4
-            column_prev: mirror_c
-            tags: [alphas, even]
         b:
           key:
             column_net: C5
-            column_next: mirror_b
-            tags: [alphas, odd]
     r4:
       anchor:
         ref: r2_f_home
@@ -222,8 +192,7 @@ points:
           key:
             # bind: [0.5, 2.25u+4.625, 0, 0] # testing
             column_net: C3
-            column_next: base
-            tags: [flex, odd]
+            tags: flex
         base:
           key:
             # bind: [0.5u, 124.3255, 0, 67.3255]
@@ -231,16 +200,13 @@ points:
             origin: [-0.5u, -0.5u]
             spread: u+0.25+4
             column_net: C4
-            column_prev: mirror_flex
-            tags: [thumbs, even]
         ext:
           key:
             # bind: [0.5u, 0, 0, 2u+8] # testing
             width: 1.25u
             spread: u/2+1.25u/2
             column_net: C5
-            column_next: mirror_ext
-            tags: [thumbs, ext, twofive, odd]
+            tags: [ext, twofive]
     ref_center:
       anchor:
         aggregate.parts: [r1_q_top, mirror_r1_q_top]
@@ -268,23 +234,23 @@ points:
     screw_top_left:
       anchor:
         ref: ref_center
-        shift: [-32, 6.7]
+        shift: [-95, 43.275]
+    screw_top_center:
+      anchor:
+        ref: ref_center
+        shift: [0, 43.275]
     screw_top_right:
       anchor:
         ref: ref_center
-        shift: [32, 6.7]
+        shift: [95, 43.275]
     screw_bottom_left:
       anchor:
         ref: ref_center
-        shift: [-80, -64.5]
-    screw_bottom_center:
-      anchor:
-        ref: ref_center
-        shift: [0, -76.949]
+        shift: [-63, -27.5]
     screw_bottom_right:
       anchor:
         ref: ref_center
-        shift: [80, -64.5]
+        shift: [63, -27.5]
 
 outlines:
   # !!!add fillets at the very end!!! or you will get malformed outline (self-intersecting) errors in kicad
@@ -583,27 +549,27 @@ pcbs:
         layer: Edge.Cuts
       # - outline: _battery_zone
       #   layer: F.SilkS
-      # - outline: preview # visualization
-      # - outline: keycaps # visualization
-      #   layer: Dwgs.User
-      # - outline: switch_cutouts # visualization
-      #   layer: Dwgs.User
-      # - outline: case_cutouts # visualization
-      #   layer: Dwgs.User
-      # - outline: test # visualization
+      # - outline: preview # debugging
+      - outline: keycaps # debugging
+        layer: Dwgs.User
+      - outline: switch_cutouts # debugging
+        layer: Dwgs.User
+      - outline: case_cutouts # debugging
+        layer: Dwgs.User
+      # - outline: test # debugging
       # - outline: _debug_ref_center
-      # - outline: case_bottom # visualization
-      # - outline: _case_top_offset2 # visualization
+      # - outline: case_bottom # debugging
+      # - outline: _case_top_offset2 # debugging
     footprints:
       pcb_shape:
         what: pcb_shape
-      # keywall: # visualization
-      #   what: keywall
+      keywall:
+        what: keywall
       mcu:
         what: xiao_plus_smd
         where: ref_mcu
         adjust.rotate: 90
-        params:
+        # params:
         #   P1:
         #   P15:
         #   P2:
@@ -630,64 +596,38 @@ pcbs:
         #   P8:
         #
         #   P28: BAT+
-      switch_flex:
-        what: sw_choc
-        where: flex
+      switches:
+        what: choc_mx_hotswap
+        where: [alphas, thumbs, flex, ext]
         params:
           from: "{{column_net}}"
-          to: "{{colrow}}"
-      switch_base:
-        what: sw_choc_1u
-        where: base
-        params:
-          from: "{{column_net}}"
-          to: "{{colrow}}"
-      switches_1u:
-        what: sw_choc_1u
-        where: [[alphas, -/q/, -/a_home/]]
-        params:
-          from: "{{column_net}}"
-          to: "{{colrow}}"
-      switches_125u:
-        what: sw_choc_125u
-        where: [/r1_q/, /r2_a/, /r4_ext/]
-        params:
-          from: "{{column_net}}"
-          to: "{{colrow}}"
+          to: "{{ext}}"
+
       diodes:
-        what: diode_sot23
-        where: [[odd, -/mirror_/]]
-        adjust:
-          shift: [5, -5]
-          rotate: 180
+        what: combo_diode
+        where: [alphas, thumbs, flex, ext]
         params:
-          side: B
-          pad_width: 0.6
-          pad_height: 0.8
-          from1: "{{colrow}}"
-          from2: "{{column_next}}_{{row}}"
+          side: F
+          from: "{{colrow}}"
           to: "{{row_net}}"
-      diodes_mirror:
-        what: diode_sot23
-        where: [[even, /mirror_/]]
+          include_tht: false
         adjust:
-          shift: [-5, -5]
-          rotate: 180
-        params:
-          side: B
-          from1: "{{colrow}}"
-          from2: "{{column_prev}}_{{row}}"
-          to: "{{row_net}}"
+          shift: [0, -5]
+          resist: true
       switch_reset:
         what: reset_button
         where: ref_switch_reset
         adjust:
           # rotate: -90
+        params:
+          include_bosses: true
+          silkscreen: false
       battery_connector:
         what: conn_molex_pico_front
         where: ref_battery_connector
         adjust.rotate: 180
         params:
+          reverse: false
           pad_1: RAW
       battery_text:
         what: text
@@ -698,11 +638,11 @@ pcbs:
           knockout: true
         adjust:
           shift: [3.488, -16.88]
-      m2_screws:
-        what: infused-kim/mounting_hole
-        # changed courtyard_offset in mounting_hole.js to 0.47
-        # increases outline to m2 screwhead size (diameter ~3.4mm)
-        where: /screw_/
-        params:
-          drill: scd
-          outline: 0.13
+    #   m2_screws:
+    #     what: infused-kim/mounting_hole
+    #     # changed courtyard_offset in mounting_hole.js to 0.47
+    #     # increases outline to m2 screwhead size (diameter ~3.4mm)
+    #     where: /screw_/
+    #     params:
+    #       drill: scd
+    #       outline: 0.13

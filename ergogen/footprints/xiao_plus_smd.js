@@ -1,6 +1,10 @@
+// author: dohn-joh
+// based on kicad file and kicad footprint from https://wiki.seeedstudio.com/XIAO_BLE/#seeed-studio-xiao-nrf52840-sense-plus
+// seeed recommends using the original xiao nrf 3d model. they do not have a xiao nrf plus 3d model yet. https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip
+
 module.exports = {
   params: {
-    designator: 'XX',
+    designator: 'MCU',
     side: 'F',
     P1: { type: 'net', value: 'P0.02' },
     P2: { type: 'net', value: 'P0.03' },
@@ -79,10 +83,10 @@ fp.push(`(fp_line (start ${(flip ? 8.89 : -8.89)} 8.6625) (end ${(flip ? 8.89 : 
 fp.push(`(fp_line (start ${(flip ? 6.985 : -6.985)} -10.5675) (end ${(flip ? -6.985 : 6.985)} -10.5675) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
 fp.push(`(fp_line (start ${(flip ? -6.985 : 6.985)} 10.5675) (end ${(flip ? 6.985 : -6.985)} 10.5675) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
 fp.push(`(fp_line (start ${(flip ? -8.89 : 8.89)} -8.6625) (end ${(flip ? -8.89 : 8.89)} 8.6625) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
-fp.push(`(fp_arc (start ${(flip ? 6.984999 : -6.984999)} -8.6625) (end ${(flip ? 8.89 : -8.89)} -8.6625) (angle 89.9999) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
-fp.push(`(fp_arc (start ${(flip ? 6.984999 : -6.984999)} 8.6625) (end ${(flip ? 6.985 : -6.985)} 10.5675) (angle 89.9999) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
-fp.push(`(fp_arc (start ${(flip ? -6.984999 : 6.984999)} -8.6625) (end ${(flip ? -6.985 : 6.985)} -10.5675) (angle 90) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
-fp.push(`(fp_arc (start ${(flip ? -6.984999 : 6.984999)} 8.6625) (end ${(flip ? -8.89 : 8.89)} 8.6625) (angle 90) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
+fp.push(`(fp_arc (start ${(flip ? 6.984999 : -6.984999)} -8.6625) (end ${(flip ? 8.89 : -8.89)} -8.6625) (angle ${(flip ? -89.9999 : 89.9999)}) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
+fp.push(`(fp_arc (start ${(flip ? 6.984999 : -6.984999)} 8.6625) (end ${(flip ? 6.985 : -6.985)} 10.5675) (angle ${(flip ? -89.9999 : 89.9999)}) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
+fp.push(`(fp_arc (start ${(flip ? -6.984999 : 6.984999)} -8.6625) (end ${(flip ? -6.985 : 6.985)} -10.5675) (angle ${(flip ? -90 : 90)}) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
+fp.push(`(fp_arc (start ${(flip ? -6.984999 : 6.984999)} 8.6625) (end ${(flip ? -8.89 : 8.89)} 8.6625) (angle ${(flip ? -90 : 90)}) (stroke (width 0.15) (type solid)) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
 
 // Dwgs.User
 fp.push(`(fp_rect (start ${(flip ? 4.47 : -4.47)} -12.0755) (end ${(flip ? -4.47 : 4.47)} -10.5675) (stroke (width 0.15) (type solid)) (fill no) (layer "Dwgs.User"))`);
@@ -96,14 +100,14 @@ fp.push(`(fp_line (start ${(flip ? 1.11892 : -1.11892)} 9.2702) (end ${(flip ? 5
 fp.push(`(fp_line (start ${(flip ? 0.73792 : -0.73792)} 4.6512) (end ${(flip ? 0.73792 : -0.73792)} 8.8892) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
 fp.push(`(fp_line (start ${(flip ? -1.244 : 1.244)} -5.6775) (end ${(flip ? 1.244 : -1.244)} -5.6775) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
 fp.push(`(fp_line (start ${(flip ? -1.625 : 1.625)} -8.5465) (end ${(flip ? -1.625 : 1.625)} -6.0585) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 5.356921 : -5.356921)} 4.651199) (end ${(flip ? 5.73792 : -5.73792)} 4.6512) (angle 90.0003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 5.356921 : -5.356921)} 8.889201) (end ${(flip ? 5.35692 : -5.35692)} 9.2702) (angle 90.0003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 1.244001 : -1.244001)} -8.546501) (end ${(flip ? 1.625 : -1.625)} -8.5465) (angle 90.0003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 1.244001 : -1.2440001)} -6.058499) (end ${(flip ? 1.244 : -1.244)} -5.6775) (angle 90.0003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 1.118919 : -1.118919)} 4.651199) (end ${(flip ? 1.11892 : -1.11892)} 4.2702) (angle 90.003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? 1.118919 : -1.118919)} 8.889201) (end ${(flip ? 0.73792 : -0.73792)} 8.8892) (angle 90.003) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? -1.244 : 1.244)} -8.5465) (end ${(flip ? -1.244 : 1.244)} -8.9275) (angle 90) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
-fp.push(`(fp_arc (start ${(flip ? -1.244 : 1.244)} -6.0585) (end ${(flip ? -1.625 : 1.625)} -6.0585) (angle 90) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 5.356921 : -5.356921)} 4.651199) (end ${(flip ? 5.73792 : -5.73792)} 4.6512) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 5.356921 : -5.356921)} 8.889201) (end ${(flip ? 5.35692 : -5.35692)} 9.2702) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 1.244001 : -1.244001)} -8.546501) (end ${(flip ? 1.625 : -1.625)} -8.5465) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 1.244001 : -1.2440001)} -6.058499) (end ${(flip ? 1.244 : -1.244)} -5.6775) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 1.118919 : -1.118919)} 4.651199) (end ${(flip ? 1.11892 : -1.11892)} 4.2702) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? 1.118919 : -1.118919)} 8.889201) (end ${(flip ? 0.73792 : -0.73792)} 8.8892) (angle ${(flip ? -90.0003 : 90.0003)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? -1.244 : 1.244)} -8.5465) (end ${(flip ? -1.244 : 1.244)} -8.9275) (angle ${(flip ? -90 : 90)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
+fp.push(`(fp_arc (start ${(flip ? -1.244 : 1.244)} -6.0585) (end ${(flip ? -1.625 : 1.625)} -6.0585) (angle ${(flip ? -90 : 90)}) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))`);
 
 // User.1
 fp.push(`(fp_circle (center -8.89 -7.5565) (end ${(flip ? 8.89 : -8.89)} -7.6835) (stroke (width 0.0254) (type default)) (fill no) (layer "User.1"))`);
@@ -143,7 +147,7 @@ fp.push(`(fp_text user "CLK    DIO" (at ${(flip ? -4.423684 : 4.423684)} -9.4624
 fp.push(`(generator "pcbnew")`);
 fp.push(`(generator_version "9.0")`);
 fp.push(`(embedded_fonts no)`);
-fp.push(`(model "\${_MYPATH}/XIAO nRF52840 Plus oriented.step" (offset (xyz 0 0.09 0)) (scale (xyz 1 1 1)) (rotate (xyz -0 -0 -0)))`);
+fp.push(`(model "\${_MYPATH}/XIAO-nRF52840.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz -0 -0 -0)))`);
 
 fp.push(`)`);
 

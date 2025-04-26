@@ -1,126 +1,61 @@
-// Author: @infused-kim
-//
-// Description:
-// PCB footprint for for molex pico ezmate connector with 2 pins. Ideal for
-// battery connections.
-//
-// This connector was chosen over the more common JST connector, because it
-// has a mated profile height of only 1.65 mm. This is lower than the Kailh
-// Choc hotswap sockets.
-//
-// It should also be compatible with the JST ACH connector (which is almost the
-// same).
-//
-// One downside is that there are almost no batteries that ship with this
-// connector. The one exception is the Nintendo Joycon 500 mAh battery.
-//
-// If you want to use the common 301230 battery, you will either need to crimp
-// the connector yourself or buy a pre-crimped connector that you attach to
-// the battery wires (available on digikey).
+// based on infused-kim's molex pico ez-mate connector footprint
 
 module.exports = {
-    params: {
-      designator: 'CONN',
-      side: 'F',
-      reverse: false,
-      pad_1: {type: 'net', value: 'RAW'},
-      pad_2: {type: 'net', value: 'GND'},
-    },
-    body: p => {
-      const top = `
-        (module conn_molex_pico_front (layer F.Cu)
-          ${p.at /* parametric position */}
-          (attr smd)
-      `;
+  params: {
+    designator: 'XX',
+    side: 'F',
+    pad_1: { type: 'net', value: 'RAW' },
+    pad_2: { type: 'net', value: 'GND' },
+  },
+  body: p => {
+    const fp = [];
+    const flip = p.side === "B";
+if (!flip && p.side !== "F") throw new Error('unsupported side: ' + p.side);
 
-      const front = `
-        (fp_text reference ${p.ref} (at 0.1 3.9 ${p.rot}) (layer F.SilkS) ${p.ref_hide}
-          (effects (font (size 1 1) (thickness 0.15)))
-        )
-  (fp_rect (start -2.1 -1.98) (end 2.1 2.52)
-    (stroke (width 0.15) (type default)) (fill none) (layer "F.SilkS"))
-  (fp_line (start -2.6 -2.8) (end -2.6 3.02)
-    (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start -2.6 3.02) (end 2.6 3.02)
-    (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 2.6 -2.8) (end -2.6 -2.8)
-    (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 2.6 3.02) (end 2.6 -2.8)
-    (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start -2.1 -1.98) (end -2.1 2.52)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -2.1 -1.98) (end 2.1 -1.98)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -2.1 2.52) (end -0.75 2.52)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -1.1 -1.98) (end -0.6 -1.272893)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -0.75 2.52) (end -0.45 2.02)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -0.6 -1.272893) (end -0.1 -1.98)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -0.45 2.02) (end 0.45 2.02)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 0.45 2.02) (end 0.75 2.52)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 0.75 2.52) (end 2.1 2.52)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 2.1 -1.98) (end 2.1 2.52)
-    (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_text user "+" (at -1.32 -2.75 ${0 + p.rot})(unlocked yes)
- (layer "F.SilkS" knockout)
-    (effects (font (size 1 1) (thickness 0.15)) (justify left bottom)))
-        (pad MP smd roundrect (at 1.75 1.9 ${p.rot}) (size 0.7 0.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-        (pad MP smd roundrect (at -1.75 1.9 ${p.rot}) (size 0.7 0.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-        (pad 2 smd roundrect (at 0.6 -1.875 ${p.rot}) (size 0.6 0.85) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25) ${p.pad_2.str})
-        (pad 1 smd roundrect (at -0.6 -1.875 ${p.rot}) (size 0.6 0.85) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25) ${p.pad_1.str})
-      `
-      const back = `
-        (fp_line (start -0.34 2.13) (end -0.64 2.63) (layer B.SilkS) (width 0.12))
-        (fp_line (start -2.6 3.02) (end -2.6 -2.8) (layer B.CrtYd) (width 0.05))
-        (fp_line (start 2.6 3.02) (end -2.6 3.02) (layer B.CrtYd) (width 0.05))
-        (fp_line (start -0.64 2.63) (end -1.14 2.63) (layer B.SilkS) (width 0.12))
-        (fp_line (start 1.16 -2.09) (end 1.16 -2.3) (layer B.SilkS) (width 0.12))
-        (fp_line (start 2.21 -2.09) (end 1.16 -2.09) (layer B.SilkS) (width 0.12))
-        (fp_line (start 2.21 1.24) (end 2.21 -2.09) (layer B.SilkS) (width 0.12))
-        (fp_line (start 2.1 -1.98) (end -2.1 -1.98) (layer B.Fab) (width 0.1))
-        (fp_line (start 1.14 2.63) (end 0.64 2.63) (layer B.SilkS) (width 0.12))
-        (fp_line (start -2.21 -2.09) (end -1.16 -2.09) (layer B.SilkS) (width 0.12))
-        (fp_line (start -2.21 1.24) (end -2.21 -2.09) (layer B.SilkS) (width 0.12))
-        (fp_line (start 0.6 -1.272893) (end 0.1 -1.98) (layer B.Fab) (width 0.1))
-        (fp_line (start 1.1 -1.98) (end 0.6 -1.272893) (layer B.Fab) (width 0.1))
-        (fp_line (start -2.6 -2.8) (end 2.6 -2.8) (layer B.CrtYd) (width 0.05))
-        (fp_line (start 2.6 -2.8) (end 2.6 3.02) (layer B.CrtYd) (width 0.05))
-        (fp_line (start -2.1 -1.98) (end -2.1 2.52) (layer B.Fab) (width 0.1))
-        (fp_line (start 2.1 -1.98) (end 2.1 2.52) (layer B.Fab) (width 0.1))
-        (fp_line (start -0.75 2.52) (end -2.1 2.52) (layer B.Fab) (width 0.1))
-        (fp_line (start -0.45 2.02) (end -0.75 2.52) (layer B.Fab) (width 0.1))
-        (fp_line (start 0.64 2.63) (end 0.34 2.13) (layer B.SilkS) (width 0.12))
-        (fp_line (start 0.45 2.02) (end -0.45 2.02) (layer B.Fab) (width 0.1))
-        (fp_line (start 0.75 2.52) (end 0.45 2.02) (layer B.Fab) (width 0.1))
-        (fp_line (start 2.1 2.52) (end 0.75 2.52) (layer B.Fab) (width 0.1))
-        (fp_line (start 0.34 2.13) (end -0.34 2.13) (layer B.SilkS) (width 0.12))
-        (pad MP smd roundrect (at 1.75 1.9 ${180 + p.rot}) (size 0.7 0.8) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25))
-        (pad 2 smd roundrect (at -0.6 -1.875 ${180 + p.rot}) (size 0.6 0.85) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25) ${p.pad_2.str})
-        (pad 1 smd roundrect (at 0.6 -1.875 ${180 + p.rot}) (size 0.6 0.85) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25) ${p.pad_1.str})
-        (pad MP smd roundrect (at -1.75 1.9 ${180 + p.rot}) (size 0.7 0.8) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25))
-      `
+fp.push(`(footprint "conn_molex_pico_front"`);
+fp.push(p.at);
+fp.push(`(layer ${(flip ? "B" : "F")}.Cu)`);
+fp.push(`(attr smd)`);
 
-      const bottom = `
-      )
-      `
+fp.push(`(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "${p.side}.SilkS") (effects (font (size 1 1) (thickness 0.15))${ p.side === "B" ? " (justify mirror)" : ""}))`);
 
-      let final = top;
 
-      if(p.side == "F" || p.reverse) {
-        final += front;
-      }
-      if(p.side == "B" || p.reverse) {
-        final += back;
-      }
+// Pads
+fp.push(`(pad "1" smd roundrect (at ${(flip ? 0.6 : -0.6)} -1.875 ${p.r}) (size 0.6 0.85) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) ${p.pad_1})`);
+fp.push(`(pad "2" smd roundrect (at ${(flip ? -0.6 : 0.6)} -1.875 ${p.r}) (size 0.6 0.85) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) ${p.pad_2})`);
+fp.push(`(pad "MP" smd roundrect (at ${(flip ? 1.75 : -1.75)} 1.9 ${p.r}) (size 0.7 0.8) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25))`);
+fp.push(`(pad "MP" smd roundrect (at ${(flip ? -1.75 : 1.75)} 1.9 ${p.r}) (size 0.7 0.8) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25))`);
 
-      final += bottom;
+// F.SilkS
+fp.push(`(fp_rect (start ${(flip ? 2.1 : -2.1)} -1.98) (end ${(flip ? -2.1 : 2.1)} 2.52) (stroke (width 0.15) (type default)) (fill no) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
+fp.push(`(fp_text user "+" (at ${(flip ? 1.32 : -1.32)} -2.75 ${p.r + 0}) (unlocked yes) (layer ${(flip ? "B.SilkS" : "F.SilkS")}) (effects (font (size 1 1) (thickness 0.15)) (justify left bottom${ flip ? " mirror" : ""})))`);
 
-      return final;
-    }
+// F.CrtYd
+fp.push(`(fp_line (start ${(flip ? 2.6 : -2.6)} -2.8) (end ${(flip ? 2.6 : -2.6)} 3.02) (stroke (width 0.05) (type solid)) (layer ${(flip ? "B.CrtYd" : "F.CrtYd")}))`);
+fp.push(`(fp_line (start ${(flip ? 2.6 : -2.6)} 3.02) (end ${(flip ? -2.6 : 2.6)} 3.02) (stroke (width 0.05) (type solid)) (layer ${(flip ? "B.CrtYd" : "F.CrtYd")}))`);
+fp.push(`(fp_line (start ${(flip ? -2.6 : 2.6)} -2.8) (end ${(flip ? 2.6 : -2.6)} -2.8) (stroke (width 0.05) (type solid)) (layer ${(flip ? "B.CrtYd" : "F.CrtYd")}))`);
+fp.push(`(fp_line (start ${(flip ? -2.6 : 2.6)} 3.02) (end ${(flip ? -2.6 : 2.6)} -2.8) (stroke (width 0.05) (type solid)) (layer ${(flip ? "B.CrtYd" : "F.CrtYd")}))`);
+
+// F.Fab
+fp.push(`(fp_line (start ${(flip ? 2.1 : -2.1)} -1.98) (end ${(flip ? 2.1 : -2.1)} 2.52) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 2.1 : -2.1)} -1.98) (end ${(flip ? -2.1 : 2.1)} -1.98) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 2.1 : -2.1)} 2.52) (end ${(flip ? 0.75 : -0.75)} 2.52) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 1.1 : -1.1)} -1.98) (end ${(flip ? 0.6 : -0.6)} -1.272893) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 0.75 : -0.75)} 2.52) (end ${(flip ? 0.45 : -0.45)} 2.02) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 0.6 : -0.6)} -1.272893) (end ${(flip ? 0.1 : -0.1)} -1.98) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? 0.45 : -0.45)} 2.02) (end ${(flip ? -0.45 : 0.45)} 2.02) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? -0.45 : 0.45)} 2.02) (end ${(flip ? -0.75 : 0.75)} 2.52) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? -0.75 : 0.75)} 2.52) (end ${(flip ? -2.1 : 2.1)} 2.52) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+fp.push(`(fp_line (start ${(flip ? -2.1 : 2.1)} -1.98) (end ${(flip ? -2.1 : 2.1)} 2.52) (stroke (width 0.1) (type solid)) (layer ${(flip ? "B.Fab" : "F.Fab")}))`);
+
+fp.push(`(generator "pcbnew")`);
+fp.push(`(generator_version "9.0")`);
+fp.push(`(embedded_fonts no)`);
+fp.push(`(model ":_MYPATH:781710002.stp" (offset (xyz 0.58 -2.3 0.24)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))`);
+
+fp.push(`)`);
+
+    return fp.join('\n');
+  }
 }
+

@@ -128,7 +128,7 @@ fp.push(`(fp_text user "CLK    DIO" (at ${(flip ? -4.423684 : 4.423684)} -9.4624
 fp.push(`(generator "pcbnew")`);
 fp.push(`(generator_version "9.0")`);
 fp.push(`(embedded_fonts no)`);
-fp.push(`(model "\${_MYPATH}/xiaoplusfromkicadpcb1.6mm.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))`);
+fp.push(`(model "${_MYPATH}/xiaoplusfromkicadpcb1.6mm.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))`);
 
 fp.push(`)`);
 

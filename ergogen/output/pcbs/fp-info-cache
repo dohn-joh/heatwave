@@ -1,88 +1,18 @@
-24915365983687748
+24904991574413914
 0
-1.5u_home
-
-
+Kailh_socket_MX-ChocV1_sadek
+MX-style keyswitch with Kailh socket mount
+MX,cherry,gateron,kailh,pg1511,socket
 0
-2
-2
-0
-1.5u_top
-
-
-0
-2
+4
 2
 0
-1u_bottom
-
-
+SOT-23
+SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
 0
-2
-2
-0
-1u_bottom_tilted
-
-
-0
-2
-2
-0
-1u_bottom_tilted_r
-
-
-0
-2
-2
-0
-1u_convex
-
-
-0
-2
-2
-0
-1u_home
-
-
-0
-2
-2
-0
-1u_home_tilted
-
-
-0
-2
-2
-0
-1u_home_tilted_r
-
-
-0
-2
-2
-0
-1u_top
-
-
-0
-2
-2
-0
-1u_top_tilted
-
-
-0
-2
-2
-0
-1u_top_tilted_r
-
-
-0
-2
-2
+3
+3
 0
 XIAO-nRF52840-Plus-SMD
 
@@ -90,6 +20,13 @@ XIAO-nRF52840-Plus-SMD
 0
 29
 29
+0
+chocmxhotswap
+
+
+0
+4
+2
 0
 keywall
 
@@ -104,6 +41,27 @@ pcb_shape
 0
 0
 0
+0
+sw_choc
+
+
+0
+2
+2
+0
+sw_choc_1.25u
+
+
+0
+2
+2
+0
+sw_choc_1u
+
+
+0
+2
+2
 0
 xiao_plus_smd_ergogen
 
@@ -139,6 +97,13 @@ EVQPUC02K_front_1
 0
 8
 4
+1
+Kailh_socket_MX-ChocV1
+MX-style keyswitch with Kailh socket mount
+MX,cherry,gateron,kailh,pg1511,socket
+0
+4
+2
 1
 MX_Switch
 
@@ -483,6 +448,13 @@ promicro_non_reversible
 24
 24
 1
+reset_button
+
+
+0
+4
+4
+1
 satania
 
 
@@ -496,13 +468,6 @@ supermini_front
 0
 24
 24
-1
-sw_reset_side
-
-
-0
-4
-4
 1
 switch_choc_left_flexion
 
@@ -519,13 +484,6 @@ switch_choc_right_flexion
 2
 1
 switch_choc_v1_v2
-
-
-0
-2
-2
-1
-switch_choc_v1_v2_blp_1.5U
 
 
 0

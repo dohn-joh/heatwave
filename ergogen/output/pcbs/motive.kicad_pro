@@ -76,7 +76,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
-        "hole_to_hole": "error",
+        "hole_to_hole": "warning",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -536,6 +536,22 @@
       {
         "netclass": "Default",
         "pattern": "mirror_ext_thumb"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "R1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "R2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "R3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "R4"
       },
       {
         "netclass": "Default",
