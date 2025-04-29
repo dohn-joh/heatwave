@@ -576,7 +576,7 @@ outlines:
     #   operation: stack
 
 pcbs:
-  motive:
+  heatwave:
     outlines:
       # - outline: pcb
       - outline: _battery_pcb_cut
@@ -636,15 +636,9 @@ pcbs:
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
-      switch_base:
-        what: sw_choc_1u
-        where: base
-        params:
-          from: "{{column_net}}"
-          to: "{{colrow}}"
       switches_1u:
         what: sw_choc_1u
-        where: [[alphas, -/q/, -/a_home/]]
+        where: [[alphas, -/q/, -/a_home/], /base/] # alphas and not q and not a, or base
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
