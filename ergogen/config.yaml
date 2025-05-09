@@ -9,6 +9,8 @@ units:
   thumb_offset: 2u
   switch_xy_mx: 14 # switch hole
   switch_xy_choc: 13.75
+  dcx: 3.3+1
+  dcy: 3+1
   lxy: 19.5
   # sf: 19.151 # sf=19.151 combined with hotswap outer_pad_width=2.4 gets hotswap pad right up against pcb edge without DRC error.
   sf: 22 # testing
@@ -32,7 +34,7 @@ units:
   rsh: 0.75 # hole diameter
   rsd: 2.75 # distance between holes
   rcx: rsx+1.5 # reset switch cutout. don't forget to account for solder pads/blobs
-  rcy: rsy+2 # reset switch cutout
+  rcy: rsy+3 # reset switch cutout
 
   # screw hole diameter (M2)
   # screw head diameter ~3.3
@@ -79,6 +81,7 @@ points:
             width: 1.25u
             column_net: C1
             column_next: w
+            mirror.column_net: C10
             tags: [alphas, twofive, odd]
         w:
           key:
@@ -86,6 +89,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C2
+            mirror.column_net: C9
             column_prev: mirror_q
             tags: [alphas, even]
         e:
@@ -93,6 +97,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C3
+            mirror.column_net: C8
             column_next: r
             tags: [alphas, odd]
         r:
@@ -100,11 +105,13 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C4
+            mirror.column_net: C7
             column_prev: mirror_e
             tags: [alphas, even]
         t:
           key:
             column_net: C5
+            mirror.column_net: C6
             column_next: mirror_t
             tags: [alphas, odd]
     r2:
@@ -125,6 +132,7 @@ points:
           key:
             width: 1.25u
             column_net: C1
+            mirror.column_net: C10
             column_next: s
             tags: [alphas, twofive, odd]
         s:
@@ -133,6 +141,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C2
+            mirror.column_net: C9
             column_prev: mirror_a
             tags: [alphas, even]
         d:
@@ -140,6 +149,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C3
+            mirror.column_net: C8
             column_next: f
             tags: [alphas, odd]
         f:
@@ -147,11 +157,13 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -angle_key
             column_net: C4
+            mirror.column_net: C7
             column_prev: mirror_d
             tags: [alphas, even]
         g:
           key:
             column_net: C5
+            mirror.column_net: C6
             column_next: mirror_g
             tags: [alphas, odd]
     r3:
@@ -168,14 +180,12 @@ points:
       rows.bottom:
         row_net: R3
       columns:
-        # extra:
-        #   key:
-        #     column_net: C0
         z:
           key:
             width: u
             # tags: [alphas, twofive]
             column_net: C1
+            mirror.column_net: C10
             column_next: x
             tags: [alphas, odd]
         x:
@@ -183,6 +193,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -0.5angle_key
             column_net: C2
+            mirror.column_net: C9
             column_prev: mirror_z
             tags: [alphas, even]
         c:
@@ -190,6 +201,7 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -1.25angle_key
             column_net: C3
+            mirror.column_net: C8
             column_next: v
             tags: [alphas, odd]
         v:
@@ -197,11 +209,13 @@ points:
             origin: [-0.5u, -0.5u]
             splay: -1.25angle_key
             column_net: C4
+            mirror.column_net: C7
             column_prev: mirror_c
             tags: [alphas, even]
         b:
           key:
             column_net: C5
+            mirror.column_net: C6
             column_next: mirror_b
             tags: [alphas, odd]
     r4:
@@ -222,8 +236,9 @@ points:
           key:
             # bind: [0.5, 2.25u+4.625, 0, 0] # testing
             column_net: C3
+            mirror.column_net: C8
             column_next: base
-            tags: [flex, odd]
+            tags: [thumbs, flex, odd]
         base:
           key:
             # bind: [0.5u, 124.3255, 0, 67.3255]
@@ -231,6 +246,7 @@ points:
             origin: [-0.5u, -0.5u]
             spread: u+0.25+4
             column_net: C4
+            mirror.column_net: C7
             column_prev: mirror_flex
             tags: [thumbs, even]
         ext:
@@ -239,6 +255,7 @@ points:
             width: 1.25u
             spread: u/2+1.25u/2
             column_net: C5
+            mirror.column_net: C6
             column_next: mirror_ext
             tags: [thumbs, ext, twofive, odd]
     ref_center:
@@ -411,6 +428,18 @@ outlines:
       where: [alphas, thumbs, flex, ext]
       # size: switch_xy_choc
       size: switch_xy_mx
+  diode_cutouts:
+    - what: rectangle
+      where: [[odd, -/mirror_/]]
+      adjust.shift: [5, -5]
+      size: [dcx, dcy]
+      fillet: 0.5
+  diode_cutouts_mirror:
+    - what: rectangle
+      where: [[even, /mirror_/]]
+      adjust.shift: [-5, -5]
+      size: [dcx, dcy]
+      fillet: 0.5
   _mcu_cutout:
     - what: rectangle
       where: ref_mcu
@@ -456,7 +485,7 @@ outlines:
   _switch_reset_cutout:
     - what: rectangle
       where: ref_switch_reset
-      adjust.shift: [0, 0]
+      adjust.shift: [0, 0.5]
       size: [rcx, rcy]
   case_cutouts:
     - name: _mcu_cutout
@@ -504,19 +533,19 @@ outlines:
     - what: circle # cutout for lofree central pin
       where: [alphas, thumbs, flex, ext]
       radius: (4.8/2)+0.4
-    - what: circle # cutout for choc v1 stab pins
-      where: [alphas, thumbs, flex, ext]
-      adjust.shift: [5.5, 0]
-      radius: 1
-    - what: circle # cutout for choc v1 stab pins
-      where: [alphas, thumbs, flex, ext]
-      adjust.shift: [-5.5, 0]
-      radius: 1
+    # - what: circle # cutout for choc v1 stab pins
+    #   where: [alphas, thumbs, flex, ext]
+    #   adjust.shift: [5.5, 0]
+    #   radius: 1
+    # - what: circle # cutout for choc v1 stab pins
+    #   where: [alphas, thumbs, flex, ext]
+    #   adjust.shift: [-5.5, 0]
+    #   radius: 1
   preview:
     - name: pcb
     - name: keycaps
       operation: stack
-  _hotswap_cutouts: # use as locations for point placement feature script
+  hotswap_locations: # use as locations for point placement feature script
     - what: circle
       where: [alphas, thumbs, flex, ext]
       radius: 1
@@ -524,8 +553,6 @@ outlines:
   case_bottom: 
     # - name: _pcb_shape
     - name: _choc_v1_v2_pin_cutouts
-      operation: stack
-    - name: _hotswap_cutouts
       operation: stack
     - what: circle # screw hole cutouts
       where: /^screw_./
@@ -535,52 +562,13 @@ outlines:
       where: /^screw_./
       radius: 0.5sch
       operation: stack
-    - what: rectangle # supermini pin cutouts
-      where: ref_mcu
-      size: [31, 3]
-      adjust.shift: [2.54/2, 7.62]
-      operation: stack
-    - what: rectangle
-      where: ref_mcu
-      size: [31, 3]
-      adjust.shift: [2.54/2, -7.62]
-      operation: stack
-    # - what: circle # 1208YD power button cutout
-    #   where: ref_switch_power
-    #   radius: 7.4/2
-    #   operation: stack
-    # - what: rectangle # add material for SKHLLC reset switch
-    #   where: ref_switch_reset
-    #   size: [rcx-2case_offset, rcy]
-    #   adjust.shift: [0, 2case_offset]
-    #   operation: add
-    # - what: circle # reset pin cutouts
-    #   where: ref_switch_reset
-    #   radius: 2.5/2
-    #   adjust.shift: [-3.5, 1.25]
-    #   operation: stack
-    # - what: circle
-    #   where: ref_switch_reset
-    #   radius: 2.5/2
-    #   adjust.shift: [3.5, 1.25]
-    #   operation: stack
-    # - what: circle
-    #   where: ref_switch_reset
-    #   radius: 2.5/2
-    #   adjust.shift: [-2.5, -1.25]
-    #   operation: stack
-    # - what: circle
-    #   where: ref_switch_reset
-    #   radius: 2.5/2
-    #   adjust.shift: [2.5, -1.25]
-    #   operation: stack
 
 pcbs:
-  heatwave:
+  unrouted:
     outlines:
       # - outline: pcb
       - outline: _battery_pcb_cut
-        layer: Edge.Cuts
+        layer: F.SilkS
       # - outline: _battery_zone
       #   layer: F.SilkS
       # - outline: preview # visualization
@@ -604,32 +592,32 @@ pcbs:
         where: ref_mcu
         adjust.rotate: 90
         params:
-        #   P1:
-        #   P15:
-        #   P2:
-        #   P16:
-        #   P3:
-        #   P17:
-        #   P4:
-        #   P18:
-        #   P5:
-        #   P19:
-        #   P6:
-        #   P20:
-        #   P7:
-        #   
-        #   P14: 5V
-        #   P13: GND
-        #   P12: 3V3
-        #   P11:
-        #   P23:
-        #   P10:
-        #   P22:
-        #   P9:
-        #   P21:
-        #   P8:
-        #
-        #   P28: BAT+
+          P1: R1
+          P15: R2
+          P2: R3
+          P16: R4
+          # P3:
+          # P17:
+          # P4:
+          # P18:
+          # P5:
+          # P19:
+          P6: C8
+          P20: C9
+          P7: C10
+          
+          # P14: 5V
+          # P13: GND
+          # P12: 3V3
+          P11: C1
+          P23: C2
+          P10: C3
+          P22: C4
+          P9: C5
+          P21: C6
+          P8: C7
+
+          # P28: BAT+
       switch_flex:
         what: sw_choc
         where: flex
@@ -682,7 +670,7 @@ pcbs:
         where: ref_battery_connector
         adjust.rotate: 180
         params:
-          pad_1: RAW
+          pad_1: BAT+
       battery_text:
         what: text
         where: ref_battery
@@ -700,3 +688,10 @@ pcbs:
         params:
           drill: scd
           outline: 0.13
+  hotswap_cuts:
+    footprints:
+      pcb_shape:
+        what: pcb_shape
+      hotswap:
+        what: hotswap_cutout
+        where: [alphas, thumbs]

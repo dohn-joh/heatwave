@@ -28,7 +28,7 @@ fp.push(`(pad "MP" smd roundrect (at ${(flip ? -1.75 : 1.75)} 1.9 ${p.r}) (size 
 
 // F.SilkS
 fp.push(`(fp_rect (start ${(flip ? 2.1 : -2.1)} -1.98) (end ${(flip ? -2.1 : 2.1)} 2.52) (stroke (width 0.15) (type default)) (fill no) (layer ${(flip ? "B.SilkS" : "F.SilkS")}))`);
-fp.push(`(fp_text user "+" (at ${(flip ? 1.32 : -1.32)} -2.75 ${p.r + 0}) (unlocked yes) (layer ${(flip ? "B.SilkS" : "F.SilkS")}) (effects (font (size 1 1) (thickness 0.15)) (justify left bottom${ flip ? " mirror" : ""})))`);
+fp.push(`(fp_text user "+" (at ${(flip ? 1.32 : -1.32)} -2.75 ${p.r + 0}) (unlocked yes) (layer ${(flip ? "B.SilkS" : "F.SilkS")} knockout) (effects (font (size 1 1) (thickness 0.15)) (justify left bottom${ flip ? " mirror" : ""})))`);
 
 // F.CrtYd
 fp.push(`(fp_line (start ${(flip ? 2.6 : -2.6)} -2.8) (end ${(flip ? 2.6 : -2.6)} 3.02) (stroke (width 0.05) (type solid)) (layer ${(flip ? "B.CrtYd" : "F.CrtYd")}))`);
