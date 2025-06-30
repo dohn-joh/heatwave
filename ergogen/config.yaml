@@ -33,7 +33,7 @@ units:
   rsy: 3.5
   rsh: 0.75 # hole diameter
   rsd: 2.75 # distance between holes
-  rcx: rsx+1.5 # reset switch cutout. don't forget to account for solder pads/blobs
+  rcx: 8.5 # reset switch cutout. don't forget to account for solder pads/blobs
   rcy: rsy+3 # reset switch cutout
 
   # screw hole diameter (M2)
@@ -273,7 +273,7 @@ points:
     ref_battery_connector:
       anchor: 
         ref: ref_center
-        shift: [0, -68.15]
+        shift: [0, -70]
     ref_switch_power:
       anchor:
         ref: ref_center
@@ -281,15 +281,19 @@ points:
     ref_switch_reset: # button on footprint is accurate. lined up with pcb edge so that case can drop straight on top without needing to squeeze.
       anchor:
         ref: ref_center
-        shift: [0, 7.45]
+        shift: [0, 10.45+1.4-0.2]
     screw_top_left:
       anchor:
         ref: ref_center
-        shift: [-32, 6.7]
+        shift: [-100.9241, 12.6]
+    screw_top_center:
+      anchor:
+        ref: ref_center
+        shift: [0, 5.5]
     screw_top_right:
       anchor:
         ref: ref_center
-        shift: [32, 6.7]
+        shift: [100.9241, 12.6]
     screw_bottom_left:
       anchor:
         ref: ref_center
@@ -461,28 +465,32 @@ outlines:
     - what: rectangle
       where: ref_battery
       size: [bcx, bcy]
-    - what: rectangle # top/bottom wiggle room
+    - what: rectangle # top wiggle room
       where: ref_battery
-      size: [bcx, bcy+2]
-      adjust.shift: [0, 0]
-    - what: rectangle # make room for tape
+      size: [bcx, bcy+1]
+      adjust.shift: [0, 0.5]
+    - what: rectangle # middle wiggle room
       where: ref_battery
-      size: [bcx+6, 15]
-      adjust.shift: [0, -3]
+      size: [bcx+5, 18]
+      adjust.shift: [0, -5]
+    # - what: rectangle # make room for tape
+    #   where: ref_battery
+    #   size: [bcx+3, 14]
+    #   adjust.shift: [0, -3]
   _battery_connector_cutout:
     - what: rectangle
       where: ref_battery_connector
       adjust.shift: [0, 0]
-      size: [5.2+1, 5.82+1]
+      size: [5.2+2, 5.82+1]
     - what: rectangle
-      where: ref_battery_connector
-      size: [6.2, 6]
-      adjust.shift: [0, 3]
+      where: ref_battery_connector # channel for wire
+      size: [5.2+2, 6]
+      adjust.shift: [0, 6]
   _switch_power_cutout: # bigger is better for case fit!
     - what: rectangle # housing
       where: ref_switch_power
       size: [rcx, rcy]
-  _switch_reset_cutout:
+  reset_cutout:
     - what: rectangle
       where: ref_switch_reset
       adjust.shift: [0, 0.5]
@@ -492,7 +500,7 @@ outlines:
     - name: _battery_cutout
     - name: _battery_connector_cutout
     # - name: _switch_power_cutout
-    - name: _switch_reset_cutout
+    - name: reset_cutout
   keycaps:
     - what: rectangle
       where: [alphas, thumbs, ext]
@@ -521,10 +529,18 @@ outlines:
     #   operation: stack
     # - name: case_cutouts # for debugging
     #   operation: stack # for debugging
-  screws: #threaded insert diameter for case
+  threaded_inserts: # for top case
     - what: circle
       where: /screw_/
       radius: 0.5tid
+  screw_holes: # for bottom case
+    - what: circle
+      where: /screw_/
+      radius: 0.5scb
+  screw_heads: #for bottom case
+    - what: circle
+      where: /screw_/
+      radius: 0.5sch
   choc_v2_pin_cutouts:
     - what: circle # cutout for lofree central pin
       where: [alphas, thumbs, flex, ext]
@@ -550,18 +566,6 @@ outlines:
       where: [alphas, thumbs, flex, ext]
       radius: 1
       adjust.shift: [0, 5.9]
-  case_bottom: 
-    # - name: _pcb_shape
-    - name: _choc_v1_v2_pin_cutouts
-      operation: stack
-    - what: circle # screw hole cutouts
-      where: /^screw_./
-      radius: 0.5scb
-      operation: stack
-    - what: circle # screwhead cutouts
-      where: /^screw_./
-      radius: 0.5sch
-      operation: stack
 
 pcbs:
   unrouted:
@@ -596,15 +600,15 @@ pcbs:
           P15: R2
           P2: R3
           P16: R4
-          # P3:
+          P3: C8
           # P17:
-          # P4:
+          P4: C9
           # P18:
-          # P5:
+          P5: C10
           # P19:
-          P6: C8
-          P20: C9
-          P7: C10
+          # P6: 
+          # P20: BATTERY VOLTAGE SENSING
+          # P7: 
           
           # P14: 5V
           # P13: GND
@@ -671,15 +675,15 @@ pcbs:
         adjust.rotate: 180
         params:
           pad_1: BAT+
-      battery_text:
-        what: text
-        where: ref_battery
-        params:
-          text: BATTERY
-          reverse: false
-          knockout: true
-        adjust:
-          shift: [3.488, -16.88]
+      # battery_text:
+      #   what: text
+      #   where: ref_battery
+      #   params:
+      #     text: BATTERY
+      #     reverse: false
+      #     knockout: true
+      #   adjust:
+      #     shift: [3.488, -16.88]
       m2_screws:
         what: infused-kim/mounting_hole
         # changed courtyard_offset in mounting_hole.js to 0.47
@@ -688,10 +692,16 @@ pcbs:
         params:
           drill: scd
           outline: 0.13
+
   hotswap_cuts:
     footprints:
       pcb_shape:
         what: pcb_shape
       hotswap:
-        what: hotswap_cutout
+        what: hotswap_v2_cutout
         where: [alphas, thumbs]
+
+  test:
+    footprints:
+      test:
+        what: test

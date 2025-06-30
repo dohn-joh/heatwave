@@ -1,7 +1,7 @@
 ﻿Designator,Footprint,Quantity,Value,LCSC Part #
 "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D2, D3, D4, D5, D6, D7, D8, D9",SOT-23,18,,
 EC1,pcb_shape,1,,
-"H1, H2, H3, H4, H5",mounting_hole,5,,
+"H1, H2, H3, H4, H5, H6",mounting_hole,6,,
 MCU1,xiao_plus_smd_prod,1,,
 XX1,sw_reset_side,1,,
 XX2,conn_molex_pico_front,1,,

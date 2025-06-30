@@ -20,7 +20,7 @@ fp.push(`(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "
 
 // Pads
 fp.push(`(pad "" np_thru_hole circle (at ${(flip ? 5.5 : -5.5)} 0 ${p.r}) (size 1.9 1.9) (drill 1.9) (layers "F&B.Cu"))`);
-fp.push(`(pad "" np_thru_hole circle (at ${(flip ? 5 : -5)} 5.15 ${p.r}) (size 1.6 1.6) (drill 1.6) (layers "*.Mask"))`);
+// fp.push(`(pad "" np_thru_hole circle (at ${(flip ? 5 : -5)} 5.15 ${p.r}) (size 1.6 1.6) (drill 1.6) (layers "*.Mask"))`); // 3rd pin
 fp.push(`(pad "" np_thru_hole circle (at 0 -5.95 ${p.r}) (size 3 3) (drill 3) (layers "F&B.Cu" "*.Mask"))`);
 fp.push(`(pad "" np_thru_hole circle (at 0 0 ${p.r}) (size 5 5) (drill 5) (layers "F&B.Cu"))`);
 fp.push(`(pad "" np_thru_hole circle (at ${(flip ? -5 : 5)} -3.75 ${p.r + 195}) (size 3 3) (drill 3) (layers "F&B.Cu" "*.Mask"))`);

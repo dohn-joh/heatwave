@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 2.2,
+          "height": 2.46,
+          "width": 2.46
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,16 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "text_thickness|190773000|62250000|750e538f-a056-4627-a9bf-3711b348062e|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "text_thickness|198867250|65040000|ed98fa0b-4304-4099-8721-479700a9d661|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -118,7 +109,7 @@
         "starved_thermal": "error",
         "text_height": "ignore",
         "text_on_edge_cuts": "error",
-        "text_thickness": "warning",
+        "text_thickness": "ignore",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_angle": "error",
@@ -470,7 +461,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "render.step",
+      "step": "prod3.step",
       "svg": "",
       "vrml": ""
     },

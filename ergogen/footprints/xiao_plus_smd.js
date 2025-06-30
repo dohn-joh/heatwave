@@ -25,7 +25,7 @@ module.exports = {
     P17: { type: 'net', value: 'P1.01' },
     P18: { type: 'net', value: 'P0.09' },
     P19: { type: 'net', value: 'P0.10' },
-    P20: { type: 'net', value: 'P0.31' },
+    // P20: { type: 'net', value: 'P0.31' }, // NOT a GPIO pin. for sensing battery voltage. uncomment this line and line 71, then comment line 72 to enable.
     P21: { type: 'net', value: 'P1.03' },
     P22: { type: 'net', value: 'P1.05' },
     P23: { type: 'net', value: 'P1.07' },
@@ -68,7 +68,8 @@ fp.push(`(pad "16" smd roundrect (at ${(flip ? 8.655 : -8.655)} -3.8065 ${p.r + 
 fp.push(`(pad "17" smd roundrect (at ${(flip ? 8.655 : -8.655)} -1.2665 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P17})`);
 fp.push(`(pad "18" smd roundrect (at ${(flip ? 8.655 : -8.655)} 1.2735 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P18})`);
 fp.push(`(pad "19" smd roundrect (at ${(flip ? 8.655 : -8.655)} 3.8135 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P19})`);
-fp.push(`(pad "20" smd roundrect (at ${(flip ? 8.655 : -8.655)} 6.3535 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P20})`);
+// fp.push(`(pad "20" smd roundrect (at ${(flip ? 8.655 : -8.655)} 6.3535 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P20})`);
+fp.push(`(pad "BATTERY_VOLTAGE_SENSING" smd roundrect (at ${(flip ? 8.655 : -8.655)} 6.3535 ${p.r + 180}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45))`);
 fp.push(`(pad "21" smd roundrect (at ${(flip ? -8.655 : 8.655)} 6.3535 ${p.r}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P21})`);
 fp.push(`(pad "22" smd roundrect (at ${(flip ? -8.655 : 8.655)} 3.8135 ${p.r}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P22})`);
 fp.push(`(pad "23" smd roundrect (at ${(flip ? -8.655 : 8.655)} 1.2735 ${p.r}) (size 1.232 0.95) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.1) (chamfer_ratio 0.35) (chamfer top_left bottom_left) (thermal_bridge_angle 45) ${p.P23})`);

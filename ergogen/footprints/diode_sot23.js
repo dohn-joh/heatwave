@@ -1,3 +1,4 @@
+// author: dohn-joh
 // based on nexperia datasheet: https://assets.nexperia.com/documents/data-sheet/BAV70.pdf
 
 module.exports = {
