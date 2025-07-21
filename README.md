@@ -34,7 +34,7 @@ Heatwave is a 36-key wireless, curved alpha stagger keyboard with integrated lev
 
 ## Build notes
 Depending on the quality of the MJF prints:
-- You will likely need to postprocess the lever keycaps in order for them to actuate properly. (This is by design. It is much easier to remove material than to add.) Postprocessing is very straightforward. All you need is a small strip of 80 grit sandpaper. Wet the sandpaper and lightly sand the underside of the lever keycap, then test to see if it actuates. If it does not, continue to sand and test until you get the desired thickness. If you want to be super accurate, you can use a caliper to measure the thickness after each sanding.
+- You will likely need to postprocess the lever keycaps in order for them to actuate properly. (This is by design. It is much easier to remove material than to add.) Postprocessing is very straightforward. All you need is a small strip of 80 grit sandpaper. Wet the sandpaper and lightly sand the underside of the lever keycap, then test to see if it actuates. If it does not, continue to sand and test until you get the desired thickness. If you want to be super accurate, you can use a caliper to measure the thickness after each sanding to match the thickness of both lever keycaps.
 - If the dressmaker pin is not friction fitting, you can either glue the head in place, or carefully use a soldering iron to heatset it in place.
 
 ***
