@@ -23,6 +23,7 @@ Heatwave is a 36-key wireless, curved alpha stagger keyboard with integrated lev
 |Battery: 301230 with molex pico ezmate connector|1|Select L0040. https://www.aliexpress.us/item/3256802674181210.html|
 |Battery connector: molex pico ezmate 1x02|1|Select 2P. https://www.aliexpress.us/item/3256805726980487.html|
 |Reset button: EVQPUC02K|1|https://www.aliexpress.us/item/2251832616044011.html|
+|Diodes: BAV70 (SOT-23)|18|https://www.amazon.com/dp/B079KKPMBT|
 |M2 heatset inserts (OD:3.2, Height: 2-3mm)|6|https://www.aliexpress.us/item/3256806286387666.html|
 |M2 screws 5mm, flat head|6|https://www.aliexpress.us/item/3256805084387535.html|
 |Switches|36|Your choice of choc v2. Recommended: Lofree hades or any POM silent linear switch|
